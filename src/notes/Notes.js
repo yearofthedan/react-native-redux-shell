@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import styled from 'styled-components/native';
 import Note from './Note';
 
@@ -7,16 +8,11 @@ const StyledNotesList = styled.ScrollView`
   backgroundColor: blue;
 `;
 
-const data = [
-  { title: 'Title the first' },
-  { title: 'Title the second' },
-  { title: 'Title the third' },
-];
-
-const Notes = () =>
+const Notes = ({ notes }) =>
   <StyledNotesList>
-    { data.map(datum => <Note>{datum.title}</Note>)}
+    { notes.map(datum => <Note>{datum.title}</Note>)}
   </StyledNotesList>
 ;
 
-export default Notes;
+const mapStateToProps = state => ({ notes: state.notes });
+export default connect(mapStateToProps)(Notes);
