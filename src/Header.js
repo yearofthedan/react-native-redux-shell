@@ -1,8 +1,8 @@
-import React from 'react';
-import { View, Text } from 'react-native';
+import styled from 'styled-components/native';
 
-const Header = () => <View style={{ height: 50, backgroundColor: 'orange' }}>
-  <Text>Some text</Text>
-</View>;
+const Header = styled.View`
+  height: 50;
+  backgroundColor: papayawhip;
+`;
 
 export default Header;

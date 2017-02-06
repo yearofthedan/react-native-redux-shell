@@ -1,10 +1,12 @@
 import React from 'react';
-import { View, AppRegistry } from 'react-native';
-import { NotesView, Header } from './src';
+import { View, Text, AppRegistry } from 'react-native';
+import { Notes, Header } from './src';
 
 const ReactNativeReduxShell = () => <View>
-  <Header />
-  <NotesView />
+  <Header>
+    <Text>Some text</Text>
+  </Header>
+  <Notes />
 </View>;
 
 AppRegistry.registerComponent('ReactNativeReduxShell', () => ReactNativeReduxShell);
