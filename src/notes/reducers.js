@@ -6,7 +6,7 @@ const defaultState = [
   { title: 'Title the third' },
 ];
 
-const notes = (state = defaultState, action) => {
+const list = (state = defaultState, action) => {
   switch (action.type) {
     default:
       return state;
@@ -14,5 +14,5 @@ const notes = (state = defaultState, action) => {
 };
 
 export default combineReducers({
-  notes,
+  list,
 });

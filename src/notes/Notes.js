@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components/native';
 import Note from './Note';
+import { getNotelist } from './selectors';
 
 const StyledNotesList = styled.ScrollView`
   height: 500;
@@ -14,5 +15,5 @@ const Notes = ({ notes }) =>
   </StyledNotesList>
 ;
 
-const mapStateToProps = state => ({ notes: state.notes });
+const mapStateToProps = state => ({ notes: getNotelist(state) });
 export default connect(mapStateToProps)(Notes);
